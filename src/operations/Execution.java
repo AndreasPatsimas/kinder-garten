@@ -72,6 +72,7 @@ public class Execution {
         fillTeachersTable();
 
         schoolYears = initSchoolYears(100);
+        fillSchoolYearsTable();
 
         scanner = new Scanner(System.in);
     }
@@ -186,7 +187,27 @@ public class Execution {
                 teachers[0] );
         schoolYears[0] = previousSchoolYear;
 
-        
+        Student[] preToddlers = new Student[20];
+        preToddlers[0] = students[3];
+        preToddlers[1] = students[4];
+        preToddlers[2] = students[5];
+        preToddlers[3] = students[9];
+        preToddlers[4] = students[10];
+        preToddlers[5] = students[13];
+        preToddlers[6] = students[16];
+        preToddlers[7] = students[19];
+
+        Student[] toddlers = new Student[20];
+        toddlers[0] = students[1];
+        toddlers[1] = students[2];
+        toddlers[2] = students[6];
+        toddlers[3] = students[7];
+        toddlers[4] = students[12];
+        toddlers[5] = students[17];
+        toddlers[6] = students[18];
+
+        SchoolYear currentSchoolYear = buildSchoolYear(2020, preToddlers, teachers[2], toddlers, teachers[1]);
+        schoolYears[1] = currentSchoolYear;
     }
 
     private static void menu(){
